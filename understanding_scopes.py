@@ -11,9 +11,11 @@ i.e. Inherting from base object adds no extra functionality.
 
 3. __dict__ assigns attributes to objects with update.
 
-4. Use type(self) in regular methods to access class methods.
+4. Use type(self) or self.__class__ in regular methods to access class methods.
 
 5. The threading.local() function creates an object capable of hiding values from view in separate threads.
+
+6. Use __enter__ and __exit__ to make something as decorator
 '''
 
 import random, threading
