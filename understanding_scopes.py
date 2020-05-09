@@ -13,7 +13,10 @@ i.e. Inherting from base object adds no extra functionality.
 
 4. Use type(self) in regular methods to access class methods.
 
+5. The threading.local() function creates an object capable of hiding values from view in separate threads.
 '''
+
+import random, threading
 
 class A:
     pass
@@ -37,8 +40,79 @@ def find_intersection(X, Y):
 
 
 class Scope:
+
+    _leaf = object()
+    context = threading.local()
+
     def __init__(self, **kwargs):
         self.__dict__.update(kwargs)
+    
+    def __enter__(self):
+        type(self).get_contexts().append(self)
+        print("Self.name right now is:", self.name)
+        for element in type(self).context.stack:
+            print(element.name)
+        # print("Stack so far is:", type(self).context.stack)
+        return self
+
+    def __exit__(self, typ, value, traceback):
+        type(self).get_contexts().pop()
+
+    def __getattr__(self, item):
+        return self.__dict__.get(item)
+
+    @classmethod
+    def get_contexts(cls):
+        if not hasattr(cls.context, "stack"):
+            cls.context.stack = []
+        return cls.context.stack
+
+    @classmethod
+    def variable_name(cls, name: str):
+        """
+        Generate PyMC4 variable name based on name scope we are currently in.
+
+        Parameters
+        ----------
+        name : str|None
+            The desired target name for a variable, can be any, including None
+
+        Returns
+        -------
+        str : scoped name
+
+        Examples
+        --------
+        >>> with Scope(name="inner"):
+        ...     print(Scope.variable_name("leaf"))
+        inner/leaf
+        >>> with Scope(name="inner"):
+        ...     with Scope():
+        ...         print(Scope.variable_name("leaf1"))
+        inner/leaf1
+
+        empty name results in None name
+        >>> assert Scope.variable_name(None) is None
+        >>> assert Scope.variable_name("") is None
+        """
+        value = "/".join(map(str, cls.chain("name", leaf=name, drop_none=True)))
+        if not value:  # For None and empty strings
+            return None
+        else:
+            return value
+        
+    @classmethod
+    def chain(cls, attr, *, leaf=_leaf, predicate=lambda _: True, drop_none=False):
+        for c in cls.get_contexts():
+            if predicate(c):
+                val = getattr(c, attr)
+                if drop_none and val is None:
+                    continue
+                else:
+                    yield val
+        if leaf is not cls._leaf:
+            if not (drop_none and leaf is None):
+                yield leaf
         
 
 if __name__ == "__main__":
@@ -55,3 +129,7 @@ if __name__ == "__main__":
     s = Scope(name="Sayam")
     if hasattr(s, 'name'):
         print("My name is:", s.name)
+
+    with Scope(name="Sayam"):
+        with Scope(name="kumar"):
+            pass
