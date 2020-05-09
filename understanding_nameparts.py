@@ -7,7 +7,7 @@ re.match tells if regular expression is matched at beginning of the string.
 re.match doesnot return an iterable and just returns the first match. None if no match
 
 (?: does not capture group in match.groups
-+ .*
++ .* difference in quantifiers. [^-]+ will expect no - in string. [^-].* will expect no - at start itself
 '''
 import re
 
@@ -33,7 +33,7 @@ class NameParts:
     in all 4 groups, 0 is the full match
     1. __transform is not captured due to (?:
     2. transform - match starting from __ upto first _
-    3. name - should not start with _ after that can have any characters
+    3. name - should not start with _ after that can have at least one character
     '''
     NAME_RE = re.compile(r"^(?:__(?P<transform>[^_]+)_)?(?P<name>[^_].*)$")
     NAME_ERROR_MESSAGE = (
