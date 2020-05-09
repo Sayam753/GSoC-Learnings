@@ -29,6 +29,12 @@ print(match)
 print("Groups:", match.groups())
 
 class NameParts:
+    '''
+    in all 4 groups, 0 is the full match
+    1. __transform is not captured due to (?:
+    2. transform - match starting from __ upto first _
+    3. name - should not start with _ after that can have any characters
+    '''
     NAME_RE = re.compile(r"^(?:__(?P<transform>[^_]+)_)?(?P<name>[^_].*)$")
     NAME_ERROR_MESSAGE = (
         "Invalid name: `{}`, the correct one should look like: `__transform_name` or `name`, "
@@ -89,6 +95,17 @@ class NameParts:
         return self.__class__(self.path, transform_name, self.untransformed_name)
 
 
-name = NameParts
-print(name.is_valid_name("sayam"))
-print(name.is_valid_name("_tiger"))
+
+def check(name):
+    if NameParts.is_valid_name(name):
+        match = NameParts.NAME_RE.match(name)
+        print(match["transform"], match["name"])
+    else:
+        print(name, "has no match")
+
+check("sayam")
+check("_tiger")
+check("__tiger_inzoo")
+check("__tiger_in_zoo")
+check("__going_to_the_market")
+check("__going__to_the_market")
