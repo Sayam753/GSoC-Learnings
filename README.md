@@ -7,4 +7,6 @@ This is a repo containing my daily learnings for GSoC project.
 - [X] 9 May: `NameParts` class (PR #[244](https://github.com/pymc-devs/pymc4/pull/244) Fix call to NAME_ERROR_MESSAGE in utils.py)
 - [X] 10 May: ~~Coroutine Model~~ Enjoyed weekend
 - [X] 11 May: Coroutine Model (Still trying to understand `name` parameter)
-- [ ] 12 May: Wrap Coroutine Model
+- [X] 12 May, 13 May: Wrap Coroutine Model
+- [X] 14 May, 15 May: Name parameter in coroutine model
+- [ ] 16 May: Blog post Variational Inference
