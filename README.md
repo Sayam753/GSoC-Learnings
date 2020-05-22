@@ -9,4 +9,4 @@ This is a repo containing my daily learnings for GSoC project.
 - [X] 11 May: Coroutine Model (Still trying to understand `name` parameter)
 - [X] 12 May, 13 May: Wrap Coroutine Model
 - [X] 14 May, 15 May: Name parameter in coroutine model
-- [ ] 16 May: Blog post Variational Inference
+- [X] 16 May - 22 May: Successfully implemented Mean Field ADVI. 
