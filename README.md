@@ -9,4 +9,6 @@ This is a repo containing my daily learnings for GSoC project.
 - [X] 11 May: Coroutine Model (Still trying to understand `name` parameter)
 - [X] 12 May, 13 May: Wrap Coroutine Model
 - [X] 14 May, 15 May: Name parameter in coroutine model
-- [X] 16 May - 22 May: Successfully implemented Mean Field ADVI. 
+- [X] 16 May - 22 May: Successfully implemented Mean Field ADVI in tfp.
+- [X] 23 May - 30 May: Written a blog post explaining Mean Field ADVI from bottom up.
+- [X] 2 April: Started Intergrating TFP and PyMC4
