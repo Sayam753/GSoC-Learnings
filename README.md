@@ -11,9 +11,9 @@ This is a repo containing my daily learnings for GSoC project.
 - [X] 14 May, 15 May: Name parameter in coroutine model
 - [X] 16 May - 22 May: Successfully implemented Mean Field ADVI in tfp.
 - [X] 23 May - 30 May: Written a blog post explaining Mean Field ADVI from bottom up.
-- [X] 2 April: Started Intergrating TFP and PyMC4.
-- [X] 3 April: Built basic interface.
-- [X] 4 April: Learnt about tfp shapes. Still not able to figure out how to incorporate mini batches.
-- [X] 5 April: Completed Mean Field ADVI implementation in PyMC4 - PR #[280](https://github.com/pymc-devs/pymc4/pull/280)
-- [X] 6 April: Written a QuickStart API guide.
-- [ ] 7 April: Weekly blog post coming up.
+- [X] 2 June: Started Intergrating TFP and PyMC4.
+- [X] 3 June: Built basic interface.
+- [X] 4 June: Learnt about tfp shapes. Still not able to figure out how to incorporate mini batches.
+- [X] 5 June: Completed Mean Field ADVI implementation in PyMC4 - PR #[280](https://github.com/pymc-devs/pymc4/pull/280)
+- [X] 6 June: Written a QuickStart API guide.
+- [ ] 7 June: Weekly blog post coming up.
