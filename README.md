@@ -13,4 +13,7 @@ This is a repo containing my daily learnings for GSoC project.
 - [X] 23 May - 30 May: Written a blog post explaining Mean Field ADVI from bottom up.
 - [X] 2 April: Started Intergrating TFP and PyMC4.
 - [X] 3 April: Built basic interface.
-- [ ] 4 April: Intergrate shapes
+- [X] 4 April: Learnt about tfp shapes. Still not able to figure out how to incorporate mini batches.
+- [X] 5 April: Completed Mean Field ADVI implementation in PyMC4 - PR #[280](https://github.com/pymc-devs/pymc4/pull/280)
+- [X] 6 April: Written a QuickStart API guide.
+- [ ] 7 April: Weekly blog post coming up.
