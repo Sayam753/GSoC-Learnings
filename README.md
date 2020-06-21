@@ -16,4 +16,7 @@ This is a repo containing my daily learnings for GSoC project.
 - [X] 4 June: Learnt about tfp shapes. Still not able to figure out how to incorporate mini batches.
 - [X] 5 June: Completed Mean Field ADVI implementation in PyMC4 - PR #[280](https://github.com/pymc-devs/pymc4/pull/280)
 - [X] 6 June: Written a QuickStart API guide.
-- [ ] 7 June: Weekly blog post coming up.
+- [X] 7 June: Blog post [week-1-into-gsoc](https://www.codingpaths.com/gsoc/week-1-into-gsoc/).
+- [X] 7 June - 14 June: Work summarized in blog post [week-2-into-gsoc](https://www.codingpaths.com/gsoc/week-2-into-gsoc/).
+- [X] 14 June - 21 June: Again, work is summarized in blog post [week-3-into-gsoc](https://www.codingpaths.com/gsoc/week-3-into-gsoc/).
+
