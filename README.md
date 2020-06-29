@@ -19,4 +19,4 @@ This is a repo containing my daily learnings for GSoC project.
 - [X] 7 June: Blog post [week-1-into-gsoc](https://www.codingpaths.com/gsoc/week-1-into-gsoc/).
 - [X] 7 June - 14 June: Work summarized in blog post [week-2-into-gsoc](https://www.codingpaths.com/gsoc/week-2-into-gsoc/).
 - [X] 14 June - 21 June: Again, work is summarized in blog post [week-3-into-gsoc](https://www.codingpaths.com/gsoc/week-3-into-gsoc/).
-
+- [X] 21 June - 28 June: Blog post [week-4-into-gsoc](https://www.codingpaths.com/gsoc/week-4-into-gsoc/)
