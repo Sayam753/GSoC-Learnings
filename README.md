@@ -22,7 +22,7 @@ My GSoC proposal was about adding a Variational Inference interface to PyMC4. Ap
 * This was a super interesting period. I got to know about many PyMC core developers through slack.
 * I spent the entire time learning about the basics of Bayesian statistics, prior, posterior predictive checks, and the theory of Variational Inference.
 * I had also written a blog post during this interval about the nuts and bolts of VI and the implementation of Mean Field ADVI as well in Tensorflow Probability. Here is the blog post - [Demystify Variational Inference](https://www.codingpaths.com/gsoc/variational-inference/).
-* The most difficult part of learning VI was to understand the transformations because PyMC3 and TFP handles transformations differently.
+* The most difficult part of learning VI was to understand the transformations because PyMC3 and TFP handle transformations differently.
 
 ## Month 1
 
@@ -103,9 +103,8 @@ Some future tasks I would like to work upon -
 
 ## Conclusion
 
-It was an incredible experience contributing to open source. I have improved my Python skills. I want to thank my mentors @ferrine and @twiecki for being extremely supportive throughout this entire journey. I am loving my time with the PyMC community. Next, I also want to thank @numfocus community for sharing this opportunity via Google Summer of Code.
+It was an incredible experience contributing to open source. I have improved my Python skills. I want to thank my mentors [@ferrine](https://github.com/ferrine) and [@twiecki](https://github.com/twiecki) for being extremely supportive throughout this entire journey. I am loving my time with the PyMC community. Next, I also want to thank [@numfocus](https://github.com/numfocus) community for sharing this opportunity via Google Summer of Code.
 
 Thank you for being a part of this fantastic summer.
 
 With :heart:, Sayam Kumar
-
