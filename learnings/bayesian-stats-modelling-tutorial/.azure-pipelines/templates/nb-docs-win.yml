@@ -1,0 +1,11 @@
+steps:
+- script: |
+    activate bayesian-modelling-tutorial
+    mkdir -p docs/notebooks
+    jupyter nbconvert --config nbconvert_config.py --execute --template full
+  displayName: 'Convert notebooks to HTML'
+
+- script: |
+    activate bayesian-modelling-tutorial
+    pandoc README.md -o docs/index.html -c static/pandoc.css -s
+  displayName: "Make index page."
